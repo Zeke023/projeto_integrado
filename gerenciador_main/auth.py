@@ -12,6 +12,7 @@ def login_usuario(cursor, conexao):
     print("\n--- LOGIN ---\n")
     email = input("Email: ")
     senha = getpass.getpass("Senha: ")
+    # Ocultação de senha para o login.
 
     cursor.execute("""
         SELECT u.id_usuario, u.nome_usuario, u.senha_usuario, t.id_tipo, t.nome_tipo
